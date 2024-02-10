@@ -1,4 +1,4 @@
-import { createClient } from "redis";
+import { createClient } from 'redis';
 import { promisify } from 'util';
 
 class RedisClient {
@@ -7,7 +7,7 @@ class RedisClient {
     this.client.wasConnected = true;
 
     this.client.on('error', (err) => {
-      this.client.wasConnected = false
+      this.client.wasConnected = false;
       console.log('Error ', err);
     });
 
