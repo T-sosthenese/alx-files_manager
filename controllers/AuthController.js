@@ -13,7 +13,7 @@ class AuthController {
       return;
     }
 
-    const tokenDecoded = Buffer.from(authToken.split(' ')[1], 'base64').toString('utf-8');
+    const tokenDecoded = Buffer.from(authToken.split(' ')[1], 'base64').toString('utf8');
     const [email, password] = tokenDecoded.split(':');
     if (!email || !password) {
       res.status(401).send({
